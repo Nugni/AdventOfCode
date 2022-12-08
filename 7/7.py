@@ -18,23 +18,6 @@ class Node:
         if self.parent is not None:
             self.parent.add_size(size)
 
-
-#root = Node("/", True)
-#
-#c1 = Node("c1", False, root)
-#c1.add_size(10)
-#c2 = Node("c2", False, root)
-#c2.add_size(10)
-#
-#print(root.name)
-#print(root.is_dir)
-#print(root.size)
-#[print(x.name) for x in root.children]
-#[print(x.is_dir) for x in root.children]
-#[print(x.size) for x in root.children]
-#print(c1.children)
-
-
 current_dir = None
 
 f = open("input.txt", "r")
@@ -83,15 +66,6 @@ space_needed = used_space-max_space
 print(space_needed)
 
 def treewalk(current_node):
-    #print(current_node.name)
-    #print(current_node.size)
-    #if len(current_node.children) > 0:
-    #    [print(x.name) for x in current_node.children]
-    #print()
-    #if len(current_node.children) > 0:
-    #    [treewalk(node) for node in current_node.children]
-    #print(current_node.name)
-    #print(current_node.size)
     if len(current_node.children) < 1:
         return
     #print(current_node.size)
